@@ -2,10 +2,10 @@
 #include <WiFi.h>
 #include "ThingSpeak.h"
 
-#define ssid "TP-LINK_39FA"
-#define pass "Qwertyuiop"
-#define SH_Channel_ID 1300507
-#define SH_API_Key  "FGFYURJFTB2XF270"
+#define ssid "YOUR_SSID"
+#define pass "YOUR PASSWORD"
+#define SH_Channel_ID YOUR_CHANNELID
+#define SH_API_Key  "YOUR_KEY"
 
 WiFiClient client;
 

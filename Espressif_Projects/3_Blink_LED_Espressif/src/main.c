@@ -9,15 +9,6 @@
 */
 #define BLINK_GPIO 2
 
-void Blink_LED(int led, int delaytime){
-  digitalWrite(led,HIGH);
-  delay(delaytime);
-
-  Serial.println("LED OFF");
-  digitalWrite(led,LOW);
-  delay(delaytime);
-}
-
 void app_main(void)
 {
     /* Configure the IOMUX register for pad BLINK_GPIO (some pads are
