@@ -1,0 +1,38 @@
+AT
+AT+CPIN? //Alphanumeric String with any password for SIMCard. 
+
+AT+CREG? //1,1 If connected to network or not
+
+AT+CGATT? //Attach of Detach from GPRS
+
+AT+CIPSHUT // Close Exsisting connections
+
+AT+CIPSTATUS //OK -- if in single connection mode
+
+AT+CIPMUX=0 //For single connection
+
+//start task and set APN, User Name, PASSWORD
+AT+CSTT="airtelgprs.com" //For Airtel OR "internet" //For IDEA
+
+AT+CIPSPRT=0
+
+AT+CIICR //To Check activation is successful 
+
+AT+CIFSR //Get Local IP Address 
+
+AT+CIPSTART="TCP","api.thingspeak.com","80"
+
+AT+CIPSEND
+
+GET http://api.thingspeak.com/update?api_key=8TZPFLQB5W67R5NE&field1=24
+
+GET http://api.thingspeak.com/update?api_key=FGFYURJFTB2XF270&field1=24
+
+GET https://api.thingspeak.com/channels/1327887/feeds.json?api_key=ZFSSAF0CJFGT5UTI&results=2
+
+
+#026
+
+AT+CIPSHUT
+
+
