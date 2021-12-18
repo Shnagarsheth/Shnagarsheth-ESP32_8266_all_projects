@@ -12,7 +12,7 @@ volatile uint8_t led1stat = 0;
 uint8_t flagKeyScan = 0, oneSecondFlag =0, buttonFlag = 0;
 
 // setting PWM properties
-const int freq = 5000; //5KHz signal
+const int freq = 1000; //5KHz signal
 const int ledChannel = 0; //Need to choose a PWM channel. There are 16 channels from 0 to 15.
 const int resolution = 8; // Need to set the signal’s duty cycle resolution: you have resolutions from 1 to 16 bits.
 //We’ll use 8-bit resolution, which means you can control the LED brightness using a value from 0 to 255.
@@ -28,7 +28,7 @@ void IRAM_ATTR onTimer1(){
   if(timerCounter == 80000){
     flagKeyScan=1;
   }
-  if (timerCounter == 100000)
+  if (timerCounter == 200000)
   {
     /* code */
     timerCounter = 0;
